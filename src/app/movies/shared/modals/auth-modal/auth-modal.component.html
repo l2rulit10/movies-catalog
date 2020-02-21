@@ -1,0 +1,40 @@
+<div class="auth">
+  <div class="auth-header">
+    <div class="auth__close" (click)="close()">x</div>
+  </div>
+  <form [formGroup]="form" (ngSubmit)="onSubmit()">
+    <h2 class="auth__title">LOGIN</h2>
+    <div class="auth__label">E-MAIL:</div>
+    <input type="text" placeholder="e-mail" class="auth__input" formControlName="email"
+    [ngClass]="{'has-error': form.get('email').invalid && form.get('email').touched}">
+    <div
+      class="form-help-text"
+      *ngIf="form.get('email').invalid && form.get('email').touched"
+    >
+      <span *ngIf="form.get('email')['errors']['required']">Email не может быть пустым. </span>
+      <span *ngIf="form.get('email')['errors']['email']">Введите корректный email. </span>
+  </div>
+    <div class="auth__label">PASSWORD:</div>
+    <input type="password" placeholder="********" class="auth__input" formControlName="password"
+    [ngClass]="{'has-error': form.get('password').invalid && form.get('password').touched}">
+    <div
+      class="form-help-text"
+      *ngIf="form.get('password').invalid && form.get('password').touched"
+    >
+      <span *ngIf="form.get('password')['errors']['required']">Пароль не может быть пустым. </span>
+      <span *ngIf="form.get('password')['errors']['minlength'] && form.get('password')['errors']['minlength']['requiredLength']">
+        Пароль должен быть больше
+        {{ form.get('password')['errors']['minlength']['requiredLength'] }}
+        символов. Сейчас {{ form.get('password')['errors']['minlength']['actualLength'] }}.
+      </span>
+    </div>
+    <button
+      type="submit" 
+      class="auth__btn" 
+      [disabled]="form.invalid" 
+      [class.disabled]="form.invalid">
+        LOGIN
+    </button>
+    <div class="message">{{message}}</div>
+  </form>
+</div>

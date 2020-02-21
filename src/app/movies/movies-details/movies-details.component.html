@@ -1,0 +1,33 @@
+<div class="movie">
+  <div class="container">
+    <img class="movie__back" [routerLink]="'/movies'" src="/assets/img/back.svg" alt="">
+    <div class="row">
+      <div class="col-md-4">
+        <img class="movie__img" [src]="isMovie.img" [alt]="isMovie.name">
+      </div>
+      <div class="col-md-6">
+        <h2 class="movie__title">{{isMovie.name}}</h2>
+        <div class="movie-wrap">
+          <div class="movie__rate">
+            <img src="/assets/img/star.svg" alt="">
+            {{isMovie.rate}} 
+            <span> /10</span>
+          </div>
+          <div class="movie__time">{{isMovie.length}}</div>
+          <div class="movie__time">{{isMovie.genres}}</div>
+        </div>
+        <p class="movie__description">
+          {{isMovie.description}}
+        </p>
+        <div class="movie-inner">
+          <ng-container *ngFor="let movie of movies">
+            <div class="movie-genres" *ngIf="isInGenre(isMovie.genres, movie.genres)">
+              <img [routerLink]="'/movies/'+movie.id" [src]="movie.img" alt="">
+              {{movie.name}}
+            </div>
+          </ng-container>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

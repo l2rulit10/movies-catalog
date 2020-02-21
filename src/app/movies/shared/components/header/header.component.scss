@@ -1,0 +1,26 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 124px;
+  &-wrap {
+    display: flex;
+    align-items: center;
+  }
+  .sign {
+    &__in {
+      font-family: "Dosis", sans-serif;
+      font-size: 14px;
+      font-weight: bold;
+      text-transform: uppercase;
+      background-color: rgb(221, 0, 63);
+      color: rgb(255, 255, 255);
+      padding: 11px 25px;
+      border-radius: 20px;
+      margin-left: 20px;
+      &:hover {
+        color: #DCF836;
+      }
+    }
+  }
+}

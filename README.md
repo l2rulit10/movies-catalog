@@ -1,27 +1,28 @@
-# MoviesCatalog
+Запускаем проекта
+  npm run dev
+Эта команда запускает JSON SERVER:
+  http://localhost:3000
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.2.9.
+Проект находится: 
+  http://localhost:4200
 
-## Development server
+Описание пректа
+Каталог фильмов
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Есть возможность войти от имени адменистратора
+  login: admin@admin
+  password: 111111
 
-## Code scaffolding
+или же можете посмотреть в db.json
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+spa польность адаптивен
 
-## Build
+Каталог фильмов
+  Список
+  Поиск
+  При нажатии на определенный фильм, открыть страницу карточка фильма
+Карточка фильма
+  Детали выбранного фильма
+  Список фильмов с тем же жанром, что и у выбранного фильма.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+  суммарное время выполнение 6-7 часов

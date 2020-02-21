@@ -1,0 +1,27 @@
+.not-found {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  background: url('/assets/img/slider-bg.jpg') no-repeat center center;
+  background-size: cover;
+
+  h1 {
+    font-family: "Dosis", sans-serif;
+    font-size: 40px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  a {
+    font-family: "Dosis", sans-serif;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    font-weight: bold;
+    text-transform: uppercase;
+    text-align: center;
+    margin: auto;
+    display: block;
+  }
+}

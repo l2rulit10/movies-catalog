@@ -1,0 +1,25 @@
+<movie-header></movie-header>
+<div class="container">
+  <div class="movies">
+    <h2 class="movies__title">Choose a movie</h2>
+    <input 
+      type="text" 
+      class="movies__search"
+      placeholder="Search for a movie"
+      [(ngModel)]="searchValue">
+    <div class="movies-catalog">
+      <ng-container *ngFor="let movie of isMovies | movieSearch:searchValue:searchField">
+        <div class="movies-wrap" [ngStyle]="{'background': 'url('+movie.img+') no-repeat center center'}">
+          <div class="movies__name">{{movie.name}}</div>
+          <div class="movies__rating">
+            <img src="/assets/img/star.svg" alt="">
+            {{movie.rate}} <span>/ 10</span>
+            <div class="movies-hvr">
+              <p [routerLink]="movie.id">Read more</p>
+            </div>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>
