@@ -13,7 +13,7 @@ export class HeaderComponent implements OnInit {
   isModalVisible: boolean;
   login: boolean;
   user: User;
-  view = true;
+  view: boolean;
   constructor(private authService: AuthService) { }
 
   ngOnInit() {
