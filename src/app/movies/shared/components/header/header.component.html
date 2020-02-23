@@ -3,11 +3,13 @@
   <img src="/assets/img/logo1.png" alt="logo">
   <div class="header-wrap">
     <div *ngIf="!view" class="sign__in" (click)="toggleAuthVisible()">LOG In</div>
-    <div *ngIf="view" class="sign__in">{{user.name}}</div>
-    <div *ngIf="view" class="sign__in" (click)="onLogout()">LOG OUT</div>
+    <ng-container *ngIf="view">
+      <div class="sign__in" [routerLink]="'/add-movie'">Admin</div>
+      <div class="sign__in" (click)="onLogout()">LOG OUT</div>
+    </ng-container>
   </div>
  </div>
 </div>
 <ng-container *ngIf="isModalVisible">
-  <movie-auth-modal [isModalVisible]="isModalVisible" (authModaClose)="onAuthModaClose()"></movie-auth-modal>
+  <movie-auth-modal [isModalVisible]="isModalVisible" (authModaClose)="onAuthModaClose()" (isVisibleAdminPanel)="isVisibleAdminPanel()"></movie-auth-modal>
 </ng-container>

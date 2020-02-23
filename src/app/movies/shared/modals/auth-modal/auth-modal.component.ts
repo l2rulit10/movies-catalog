@@ -16,6 +16,8 @@ export class AuthModalComponent implements OnInit {
   message: string;
   @Input() isModalVisible;
   @Output() authModaClose = new EventEmitter<any>();
+  @Output() isVisibleAdminPanel = new EventEmitter<any>();
+
 
   constructor(private usersService: UsersService,
               private authService: AuthService) { }
@@ -41,6 +43,7 @@ export class AuthModalComponent implements OnInit {
             window.localStorage.setItem('user', JSON.stringify(user));
             this.authService.login();
             this.authModaClose.emit();
+            this.isVisibleAdminPanel.emit();
           } else {
             this.message = 'Пароль не верный';
           }

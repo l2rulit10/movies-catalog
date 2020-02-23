@@ -18,15 +18,18 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {
     this.user = JSON.parse(window.localStorage.getItem('user'));
-  }
-  toggleAuthVisible() {
-    this.isModalVisible = true;
-    if (this.user) {
+    if (this.user !== null) {
       this.view = true;
     }
   }
+  toggleAuthVisible() {
+    this.isModalVisible = true;
+  }
   onAuthModaClose() {
     this.isModalVisible = false;
+  }
+  isVisibleAdminPanel() {
+    this.view = true;
   }
   onLogout() {
     this.authService.logout();

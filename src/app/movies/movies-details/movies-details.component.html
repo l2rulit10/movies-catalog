@@ -21,7 +21,7 @@
         </p>
         <div class="movie-inner">
           <ng-container *ngFor="let movie of movies">
-            <div class="movie-genres" *ngIf="isInGenre(isMovie.genres, movie.genres)">
+            <div class="movie-genres" *ngIf="isInGenre(isMovie.genres, movie.genres) && isMovie.id !== movie.id">
               <img [routerLink]="'/movies/'+movie.id" [src]="movie.img" alt="">
               {{movie.name}}
             </div>
