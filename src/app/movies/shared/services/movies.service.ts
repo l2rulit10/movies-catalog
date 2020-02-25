@@ -12,7 +12,7 @@ export class MoviesService extends BaseApi {
   }
 
   addMovie(movie: Movie): Observable<Movie> {
-    return this.post('Movies', movie);
+    return this.post('movies', movie);
   }
 
   getMovies(): Observable<Movie[]> {
@@ -21,5 +21,9 @@ export class MoviesService extends BaseApi {
 
   getMovieById(id: string): Observable<Movie> {
     return this.get(`movies/${id}`);
+  }
+
+  deleteMovie(movie: Movie): Observable<Movie> {
+    return this.delete(`movies/${movie.id}`);
   }
 }
