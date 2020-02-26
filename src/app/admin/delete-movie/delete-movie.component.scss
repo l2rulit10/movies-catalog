@@ -1,0 +1,14 @@
+.delete {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Dosis', sans-serif;
+  border-bottom: 1px solid #405266;
+  height: 60px;
+  &__name {
+    font-size: 24px;
+  }
+  img {
+    width: 35px;
+  }
+}

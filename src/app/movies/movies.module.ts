@@ -11,10 +11,16 @@ import { MoviesDetailsComponent } from './movies-details/movies-details.componen
 import { AuthModalComponent } from './shared/modals/auth-modal/auth-modal.component';
 import { AuthService } from './shared/services/auth.service';
 import { UsersService } from './shared/services/users.service';
-import { AddMovieComponent } from './add-movie/add-movie.component';
+
 
 @NgModule({
-  declarations: [MoviesComponent, HeaderComponent, SearchPipe, MoviesDetailsComponent, AuthModalComponent, AddMovieComponent],
+  declarations: [
+    MoviesComponent,
+    HeaderComponent,
+    SearchPipe,
+    MoviesDetailsComponent,
+    AuthModalComponent
+  ],
   imports: [CommonModule, MoviesRoutingModule, FormsModule, ReactiveFormsModule],
   exports: [HeaderComponent, AuthModalComponent],
   providers: [MoviesService, AuthService, UsersService]

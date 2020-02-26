@@ -6,12 +6,12 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { MoviesModule } from './movies/movies.module';
 import { NotFoundComponent } from './movies/shared/components/not-found/not-found.component';
-
+import { AuthGuard } from './movies/shared/services/auth.guard';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NotFoundComponent
+    NotFoundComponent,
   ],
   imports: [
     BrowserModule,
@@ -19,7 +19,7 @@ import { NotFoundComponent } from './movies/shared/components/not-found/not-foun
     AppRoutingModule,
     HttpModule
   ],
-  providers: [],
+  providers: [AuthGuard],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

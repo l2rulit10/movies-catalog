@@ -1,0 +1,125 @@
+<div class="container">
+  <h2>Add Movie</h2>
+  <form #f="ngForm" (ngSubmit)="onSubmit(f)">
+    <input 
+      required
+      type="text"
+      #key="ngModel"
+      ngModel
+      name="key"
+      placeholder="Key">
+    <input 
+      required
+      type="text"
+      #name="ngModel"
+      ngModel
+      name="name"
+      placeholder="Name">
+    <textarea
+      required
+      name="description"
+      #description="ngModel"
+      ngModel
+      cols="30" 
+      rows="5"
+      placeholder="Description">
+    </textarea>
+      <div class="row">
+        <div class="col-md-2">
+          <div class="input-wrap">
+            <input name="action" type="radio" [value]="'action'" #action="ngModel" ngModel>
+            <label for="action">action</label>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="input-wrap">
+            <input name="comedy" type="radio" [value]="'comedy'" #comedy="ngModel" ngModel>
+            <label for="comedy">comedy</label>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="input-wrap">
+            <input name="crime" type="radio" [value]="'crime'" #crime="ngModel" ngModel>
+            <label for="crime">crime</label>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="input-wrap">
+            <input name="thriller" type="radio" [value]="'thriller'" #thriller="ngModel" ngModel>
+            <label for="thriller">thriller</label>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="input-wrap">
+            <input name="drama" type="radio" [value]="'drama'" #drama="ngModel" ngModel>
+            <label for="drama">drama</label>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="input-wrap">
+            <input name="adventure" type="radio" [value]="'adventure'" #adventure="ngModel" ngModel>
+            <label for="adventure">adventure</label>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="input-wrap">
+            <input name="biography" type="radio" [value]="'biography'" #biography="ngModel" ngModel>
+            <label for="biography">biography</label>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="input-wrap">
+            <input name="history" type="radio" [value]="'history'" #history="ngModel" ngModel>
+            <label for="history">history</label>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="input-wrap">
+            <input name="sport" type="radio" [value]="'sport'" #sport="ngModel" ngModel>
+            <label for="sport">sport</label>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="input-wrap">
+            <input name="mystery" type="radio" [value]="'mystery'" #mystery="ngModel" ngModel>
+            <label for="mystery">mystery</label>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="input-wrap">
+            <input name="scifi" type="radio" [value]="'scifi'" #scifi="ngModel" ngModel>
+            <label for="scifi">scifi</label>
+          </div>
+        </div>
+      </div>
+    <input 
+      required
+      type="text"
+      #rate="ngModel"
+      [ngModel]="1"
+      name="rate"
+      min="1"
+      max="10"
+      placeholder="Rate">
+    <input 
+      required
+      type="text"
+      #length="ngModel"
+      ngModel
+      name="length"
+      placeholder="Length">
+    <input 
+      required
+      type="text"
+      #img="ngModel"
+      ngModel
+      name="img"
+      placeholder="Img URL">
+    <button 
+      [class.disabled]="f.invalid"
+      [disabled]="f.invalid" 
+      type="submit">
+        send
+    </button>
+  </form>
+</div>

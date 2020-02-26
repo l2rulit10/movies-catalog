@@ -4,7 +4,8 @@
   <div class="header-wrap">
     <div *ngIf="!view" class="sign__in" (click)="toggleAuthVisible()">LOG In</div>
     <ng-container *ngIf="view">
-      <div class="sign__in" [routerLink]="'/add-movie'">Admin</div>
+      <div class="sign__in" [routerLink]="'/admin/add-movie'">Add Movie</div>
+      <div class="sign__in" [routerLink]="'/admin/delete-movie'">Delete Movie</div>
       <div class="sign__in" (click)="onLogout()">LOG OUT</div>
     </ng-container>
   </div>

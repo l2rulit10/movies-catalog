@@ -1,0 +1,7 @@
+<div class="container">
+  <h2>Delete Movie</h2>
+  <div class="delete" *ngFor="let movie of movies">
+    <div class="delete__name">{{movie.name}}</div>
+    <img (click)="deleteMovie(movie)" src="/assets/img/delete.svg" alt="delete">
+  </div>
+</div>

@@ -38,7 +38,7 @@ button {
   margin-bottom: 20px;
   width: 140px;
   input {
-    width: 50px;
+    width: 16px;
     margin: 0 15px 0 0;
   }
   label {
@@ -46,20 +46,7 @@ button {
     font-family: 'Dosis', sans-serif;
   }
 }
-.delete {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-family: 'Dosis', sans-serif;
-  border-bottom: 1px solid #405266;
-  height: 60px;
-  &__name {
-    font-size: 24px;
-  }
-  img {
-    width: 35px;
-  }
-}
+
 @media(max-width: 768px) {
   button {
     width: 100%;
